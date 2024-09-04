@@ -2,7 +2,7 @@ package instaladordeapps;
 
 /**
  *
- * @author manue awebo was
+ * @author Manuel Pretel | Junior Developer
  */
 public class AppInstaller extends javax.swing.JFrame {
 

@@ -37,13 +37,13 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRadioButton4" min="-2" pref="98" max="-2" attributes="0"/>
+                          <Component id="operagx" min="-2" pref="98" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jRadioButton3" min="-2" pref="98" max="-2" attributes="0"/>
-                              <Component id="jRadioButton1" max="32767" attributes="0"/>
-                              <Component id="jRadioButton2" alignment="0" min="-2" pref="107" max="-2" attributes="0"/>
+                              <Component id="opera" min="-2" pref="98" max="-2" attributes="0"/>
+                              <Component id="googlechrome" max="32767" attributes="0"/>
+                              <Component id="mozillafirefox" alignment="0" min="-2" pref="107" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jRadioButton9" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                          <Component id="vivaldi" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -55,25 +55,25 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRadioButton5" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                          <Component id="jRadioButton6" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                          <Component id="vlc" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                          <Component id="spotify" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton10" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
-                  <Component id="jRadioButton7" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                  <Component id="jRadioButton8" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                  <Component id="malwarebytes" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                  <Component id="avast" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                  <Component id="bitdefender" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jRadioButton13" min="-2" pref="104" max="-2" attributes="0"/>
-                  <Component id="jRadioButton12" min="-2" pref="104" max="-2" attributes="0"/>
-                  <Component id="jRadioButton11" min="-2" pref="104" max="-2" attributes="0"/>
+                  <Component id="openoffice" min="-2" pref="104" max="-2" attributes="0"/>
+                  <Component id="googledrive" min="-2" pref="104" max="-2" attributes="0"/>
+                  <Component id="winrar" min="-2" pref="104" max="-2" attributes="0"/>
                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton14" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="adobeacrobat" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="169" pref="266" max="32767" attributes="0"/>
           </Group>
@@ -83,6 +83,11 @@
               <EmptySpace max="32767" attributes="0"/>
               <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="btndownload" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="374" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -105,32 +110,34 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton10" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton11" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="googlechrome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="vlc" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="malwarebytes" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="winrar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton12" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mozillafirefox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="spotify" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="avast" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="googledrive" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jRadioButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton8" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton13" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="opera" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bitdefender" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="openoffice" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jRadioButton4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton14" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="operagx" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="adobeacrobat" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="110" max="32767" attributes="0"/>
+              <Component id="vivaldi" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="68" max="32767" attributes="0"/>
+              <Component id="btndownload" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -152,30 +159,33 @@
         <Property name="text" type="java.lang.String" value="Default:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+    <Component class="javax.swing.JRadioButton" name="googlechrome">
       <Properties>
         <Property name="text" type="java.lang.String" value="Google Chrome"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="googlechromeActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+    <Component class="javax.swing.JRadioButton" name="mozillafirefox">
       <Properties>
         <Property name="text" type="java.lang.String" value="Mozilla Firefox"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+    <Component class="javax.swing.JRadioButton" name="opera">
       <Properties>
         <Property name="text" type="java.lang.String" value="Opera"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton4">
+    <Component class="javax.swing.JRadioButton" name="operagx">
       <Properties>
         <Property name="text" type="java.lang.String" value="Opera GX"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton4ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operagxActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -194,20 +204,20 @@
         <Property name="text" type="java.lang.String" value="Audio &amp; Video"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton5">
+    <Component class="javax.swing.JRadioButton" name="vlc">
       <Properties>
         <Property name="text" type="java.lang.String" value="VLC"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton5ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vlcActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton6">
+    <Component class="javax.swing.JRadioButton" name="spotify">
       <Properties>
         <Property name="text" type="java.lang.String" value="Spotify"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton9">
+    <Component class="javax.swing.JRadioButton" name="vivaldi">
       <Properties>
         <Property name="text" type="java.lang.String" value="Vivaldi"/>
       </Properties>
@@ -220,20 +230,20 @@
         <Property name="text" type="java.lang.String" value="Antivirus"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton10">
+    <Component class="javax.swing.JRadioButton" name="malwarebytes">
       <Properties>
         <Property name="text" type="java.lang.String" value="Malwarebytes"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton10ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="malwarebytesActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton7">
+    <Component class="javax.swing.JRadioButton" name="avast">
       <Properties>
         <Property name="text" type="java.lang.String" value="Avast"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton8">
+    <Component class="javax.swing.JRadioButton" name="bitdefender">
       <Properties>
         <Property name="text" type="java.lang.String" value="Bitdefender"/>
       </Properties>
@@ -246,22 +256,22 @@
         <Property name="text" type="java.lang.String" value="Others"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton11">
+    <Component class="javax.swing.JRadioButton" name="winrar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Winrar"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton12">
+    <Component class="javax.swing.JRadioButton" name="googledrive">
       <Properties>
         <Property name="text" type="java.lang.String" value="Google Drive"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton13">
+    <Component class="javax.swing.JRadioButton" name="openoffice">
       <Properties>
         <Property name="text" type="java.lang.String" value="OpenOffice"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton14">
+    <Component class="javax.swing.JRadioButton" name="adobeacrobat">
       <Properties>
         <Property name="text" type="java.lang.String" value="Adobe Acrobat"/>
       </Properties>
@@ -273,6 +283,17 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Your Apps:"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btndownload">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="12" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Download"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btndownloadActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

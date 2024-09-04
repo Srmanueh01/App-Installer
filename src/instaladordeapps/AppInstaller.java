@@ -1,9 +1,17 @@
+
 package instaladordeapps;
+
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Manuel Pretel | Junior Developer
  */
+
 public class AppInstaller extends javax.swing.JFrame {
 
     /**
@@ -24,25 +32,26 @@ public class AppInstaller extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        googlechrome = new javax.swing.JRadioButton();
+        mozillafirefox = new javax.swing.JRadioButton();
+        opera = new javax.swing.JRadioButton();
+        operagx = new javax.swing.JRadioButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
+        vlc = new javax.swing.JRadioButton();
+        spotify = new javax.swing.JRadioButton();
+        vivaldi = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
-        jRadioButton10 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
+        malwarebytes = new javax.swing.JRadioButton();
+        avast = new javax.swing.JRadioButton();
+        bitdefender = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
-        jRadioButton11 = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
-        jRadioButton13 = new javax.swing.JRadioButton();
-        jRadioButton14 = new javax.swing.JRadioButton();
+        winrar = new javax.swing.JRadioButton();
+        googledrive = new javax.swing.JRadioButton();
+        openoffice = new javax.swing.JRadioButton();
+        adobeacrobat = new javax.swing.JRadioButton();
         jLabel7 = new javax.swing.JLabel();
+        btndownload = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,21 +61,26 @@ public class AppInstaller extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Default:");
 
-        jRadioButton1.setText("Google Chrome");
-
-        jRadioButton2.setText("Mozilla Firefox");
-
-        jRadioButton3.setText("Opera");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        googlechrome.setText("Google Chrome");
+        googlechrome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                googlechromeActionPerformed(evt);
             }
         });
 
-        jRadioButton4.setText("Opera GX");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        mozillafirefox.setText("Mozilla Firefox");
+
+        opera.setText("Opera");
+        opera.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                operaActionPerformed(evt);
+            }
+        });
+
+        operagx.setText("Opera GX");
+        operagx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                operagxActionPerformed(evt);
             }
         });
 
@@ -76,44 +90,52 @@ public class AppInstaller extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setText("Audio & Video");
 
-        jRadioButton5.setText("VLC");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        vlc.setText("VLC");
+        vlc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                vlcActionPerformed(evt);
             }
         });
 
-        jRadioButton6.setText("Spotify");
+        spotify.setText("Spotify");
 
-        jRadioButton9.setText("Vivaldi");
+        vivaldi.setText("Vivaldi");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setText("Antivirus");
 
-        jRadioButton10.setText("Malwarebytes");
-        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
+        malwarebytes.setText("Malwarebytes");
+        malwarebytes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton10ActionPerformed(evt);
+                malwarebytesActionPerformed(evt);
             }
         });
 
-        jRadioButton7.setText("Avast");
+        avast.setText("Avast");
 
-        jRadioButton8.setText("Bitdefender");
+        bitdefender.setText("Bitdefender");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel6.setText("Others");
 
-        jRadioButton11.setText("Winrar");
+        winrar.setText("Winrar");
 
-        jRadioButton12.setText("Google Drive");
+        googledrive.setText("Google Drive");
 
-        jRadioButton13.setText("OpenOffice");
+        openoffice.setText("OpenOffice");
 
-        jRadioButton14.setText("Adobe Acrobat");
+        adobeacrobat.setText("Adobe Acrobat");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Your Apps:");
+
+        btndownload.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btndownload.setText("Download");
+        btndownload.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btndownloadActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -131,12 +153,12 @@ public class AppInstaller extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(70, 70, 70)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(operagx, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jRadioButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(opera, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(googlechrome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(mozillafirefox, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(vivaldi, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
@@ -144,21 +166,21 @@ public class AppInstaller extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(vlc, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(spotify, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
-                    .addComponent(jRadioButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(malwarebytes, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(avast, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bitdefender, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(openoffice, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(googledrive, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(winrar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
-                    .addComponent(jRadioButton14))
+                    .addComponent(adobeacrobat))
                 .addGap(169, 266, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(44, 44, 44)
@@ -166,6 +188,10 @@ public class AppInstaller extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(155, 155, 155))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btndownload)
+                .addGap(374, 374, 374))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,85 +210,118 @@ public class AppInstaller extends javax.swing.JFrame {
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton10)
-                    .addComponent(jRadioButton11))
+                    .addComponent(googlechrome)
+                    .addComponent(vlc)
+                    .addComponent(malwarebytes)
+                    .addComponent(winrar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton6)
-                    .addComponent(jRadioButton7)
-                    .addComponent(jRadioButton12))
+                    .addComponent(mozillafirefox)
+                    .addComponent(spotify)
+                    .addComponent(avast)
+                    .addComponent(googledrive))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton8)
-                    .addComponent(jRadioButton13))
+                    .addComponent(opera)
+                    .addComponent(bitdefender)
+                    .addComponent(openoffice))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton14))
+                    .addComponent(operagx)
+                    .addComponent(adobeacrobat))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton9)
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addComponent(vivaldi)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addComponent(btndownload)
+                .addGap(19, 19, 19))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void operaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_operaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_operaActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void operagxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_operagxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_operagxActionPerformed
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+    private void vlcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vlcActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    }//GEN-LAST:event_vlcActionPerformed
 
-    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
+    private void malwarebytesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_malwarebytesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton10ActionPerformed
+    }//GEN-LAST:event_malwarebytesActionPerformed
+
+    private void btndownloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndownloadActionPerformed
+
+        try {
+            Desktop desktop = Desktop.getDesktop();
+            URI url = null;
+
+            if (googlechrome.isSelected()) {
+                url = new URI("https://www.google.com/intl/es_es/chrome/");
+            } else {
+                JOptionPane.showMessageDialog(null, "Seleciona");
+                return;
+            }
+            if (url != null) {
+                desktop.browse(url);
+            }
+        } catch (IOException | URISyntaxException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Ocurrió un error al intentar abrir la URL.");
+        }
+    
+    }//GEN-LAST:event_btndownloadActionPerformed
+
+    private void googlechromeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_googlechromeActionPerformed
+    }//GEN-LAST:event_googlechromeActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+    /* Set the Nimbus look and feel */
+    //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+    /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
+     */
+    try {
+        for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            if ("Nimbus".equals(info.getName())) {
+                javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                break;
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AppInstaller.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AppInstaller.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AppInstaller.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AppInstaller.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AppInstaller().setVisible(true);
-            }
-        });
+    } catch (ClassNotFoundException ex) {
+        java.util.logging.Logger.getLogger(AppInstaller.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    } catch (InstantiationException ex) {
+        java.util.logging.Logger.getLogger(AppInstaller.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    } catch (IllegalAccessException ex) {
+        java.util.logging.Logger.getLogger(AppInstaller.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        java.util.logging.Logger.getLogger(AppInstaller.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
     }
+    //</editor-fold>
+
+    /* Create and display the form */
+    java.awt.EventQueue.invokeLater(new Runnable() {
+        public void run() {
+            new AppInstaller().setVisible(true);
+        }
+    });
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton adobeacrobat;
+    private javax.swing.JRadioButton avast;
+    private javax.swing.JRadioButton bitdefender;
+    private javax.swing.JButton btndownload;
+    private javax.swing.JRadioButton googlechrome;
+    private javax.swing.JRadioButton googledrive;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -270,19 +329,14 @@ public class AppInstaller extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton13;
-    private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
+    private javax.swing.JRadioButton malwarebytes;
+    private javax.swing.JRadioButton mozillafirefox;
+    private javax.swing.JRadioButton openoffice;
+    private javax.swing.JRadioButton opera;
+    private javax.swing.JRadioButton operagx;
+    private javax.swing.JRadioButton spotify;
+    private javax.swing.JRadioButton vivaldi;
+    private javax.swing.JRadioButton vlc;
+    private javax.swing.JRadioButton winrar;
     // End of variables declaration//GEN-END:variables
 }

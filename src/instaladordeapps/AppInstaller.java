@@ -44,6 +44,14 @@ public class AppInstaller extends javax.swing.JFrame {
         adobeacrobat = new javax.swing.JRadioButton();
         jLabel7 = new javax.swing.JLabel();
         btndownload = new javax.swing.JButton();
+        discord = new javax.swing.JRadioButton();
+        text1 = new javax.swing.JTextField();
+        text2 = new javax.swing.JTextField();
+        text3 = new javax.swing.JTextField();
+        text4 = new javax.swing.JTextField();
+        text5 = new javax.swing.JTextField();
+        btnsave = new javax.swing.JButton();
+        btnedit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,6 +112,37 @@ public class AppInstaller extends javax.swing.JFrame {
             }
         });
 
+        discord.setText("Discord");
+
+        text1.setText("Your URL");
+        text1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text1ActionPerformed(evt);
+            }
+        });
+
+        text2.setText("Your URL");
+
+        text3.setText("Your URL");
+
+        text4.setText("Your URL");
+
+        text5.setText("Your URL");
+
+        btnsave.setText("Save");
+        btnsave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsaveActionPerformed(evt);
+            }
+        });
+
+        btnedit.setText("Edit");
+        btnedit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btneditActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -112,6 +151,16 @@ public class AppInstaller extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(291, 291, 291))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addGap(155, 155, 155))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btndownload)
+                .addGap(374, 374, 374))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -134,7 +183,8 @@ public class AppInstaller extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(vlc, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(spotify, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(spotify, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(discord, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
@@ -143,62 +193,82 @@ public class AppInstaller extends javax.swing.JFrame {
                     .addComponent(bitdefender, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(openoffice, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(googledrive, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(winrar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
+                    .addComponent(googledrive, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(openoffice, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(adobeacrobat))
-                .addGap(169, 266, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7)
-                .addGap(155, 155, 155))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btndownload)
-                .addGap(374, 374, 374))
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnsave)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnedit))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(text2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                        .addComponent(text3, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(text4, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(text5, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(text1)))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(googlechrome)
+                            .addComponent(vlc)
+                            .addComponent(malwarebytes)
+                            .addComponent(winrar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(mozillafirefox)
+                            .addComponent(spotify)
+                            .addComponent(avast)
+                            .addComponent(googledrive))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(opera)
+                            .addComponent(bitdefender)
+                            .addComponent(openoffice)
+                            .addComponent(discord))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(operagx)
+                            .addComponent(adobeacrobat))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(vivaldi))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(text1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(googlechrome)
-                    .addComponent(vlc)
-                    .addComponent(malwarebytes)
-                    .addComponent(winrar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(mozillafirefox)
-                    .addComponent(spotify)
-                    .addComponent(avast)
-                    .addComponent(googledrive))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(opera)
-                    .addComponent(bitdefender)
-                    .addComponent(openoffice))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(operagx)
-                    .addComponent(adobeacrobat))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(vivaldi)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                    .addComponent(btnsave)
+                    .addComponent(btnedit))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(btndownload)
                 .addGap(19, 19, 19))
         );
@@ -209,6 +279,11 @@ public class AppInstaller extends javax.swing.JFrame {
     private void btndownloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndownloadActionPerformed
 
         List<URI> urls = new ArrayList<>();
+        String webpersonal1 = text1.getText();
+        String webpersonal2 = text2.getText();
+        String webpersonal3 = text3.getText();
+        String webpersonal4 = text4.getText();
+        String webpersonal5 = text5.getText();
 
         try {
             if (googlechrome.isSelected()) {
@@ -226,34 +301,42 @@ public class AppInstaller extends javax.swing.JFrame {
             if (vivaldi.isSelected()) {
                 urls.add(new URI("https://vivaldi.com/"));
             }
-            if (vlc.isSelected()){
+            if (vlc.isSelected()) {
                 urls.add(new URI("https://www.videolan.org/vlc/"));
             }
-            if (spotify.isSelected()){
+            if (spotify.isSelected()) {
                 urls.add(new URI("https://www.spotify.com/es/download/other/"));
             }
-            if (malwarebytes.isSelected()){
+            if (discord.isSelected()) {
+                urls.add(new URI("https://discord.com/download"));
+            }
+            if (malwarebytes.isSelected()) {
                 urls.add(new URI("https://www.malwarebytes.com/es/mwb-download/thankyou"));
             }
-            if (avast.isSelected()){
+            if (avast.isSelected()) {
                 urls.add(new URI("https://www.avast.com/es-es/free-antivirus-download#pc"));
             }
-            if (bitdefender.isSelected()){
+            if (bitdefender.isSelected()) {
                 urls.add(new URI("https://www.bitdefender.es/solutions/free.html"));
             }
-            if (winrar.isSelected()){
+            if (winrar.isSelected()) {
                 urls.add(new URI("https://winrar.es/descargas"));
             }
-            if (googledrive.isSelected()){
+            if (googledrive.isSelected()) {
                 urls.add(new URI("https://www.google.com/intl/es_es/drive/download/"));
             }
-            if (openoffice.isSelected()){
+            if (openoffice.isSelected()) {
                 urls.add(new URI("https://www.openoffice.org/es/descargar/"));
             }
-            if (adobeacrobat.isSelected()){
+            if (adobeacrobat.isSelected()) {
                 urls.add(new URI("https://get.adobe.com/es/reader/"));
             }
-            
+            if (webpersonal1.trim().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "El campo no puede estar vacío");
+
+            } else {
+                urls.add(new URI(webpersonal1));
+            }
 
             if (urls.isEmpty()) {
                 // Si no se selecciona ninguna opción
@@ -271,6 +354,29 @@ public class AppInstaller extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_btndownloadActionPerformed
+
+    private void text1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text1ActionPerformed
+
+    private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
+        // TODO add your handling code here:
+        text1.setEnabled(false);
+        text2.setEnabled(false);
+        text3.setEnabled(false);
+        text4.setEnabled(false);
+        text5.setEnabled(false);
+    }//GEN-LAST:event_btnsaveActionPerformed
+
+    private void btneditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneditActionPerformed
+        // TODO add your handling code here:
+        text1.setEnabled(true);
+        text2.setEnabled(true);
+        text3.setEnabled(true);
+        text4.setEnabled(true);
+        text5.setEnabled(true);
+        
+    }//GEN-LAST:event_btneditActionPerformed
 
     /**
      * @param args the command line arguments
@@ -312,6 +418,9 @@ public class AppInstaller extends javax.swing.JFrame {
     private javax.swing.JRadioButton avast;
     private javax.swing.JRadioButton bitdefender;
     private javax.swing.JButton btndownload;
+    private javax.swing.JButton btnedit;
+    private javax.swing.JButton btnsave;
+    private javax.swing.JRadioButton discord;
     private javax.swing.JRadioButton googlechrome;
     private javax.swing.JRadioButton googledrive;
     private javax.swing.JLabel jLabel1;
@@ -327,6 +436,11 @@ public class AppInstaller extends javax.swing.JFrame {
     private javax.swing.JRadioButton opera;
     private javax.swing.JRadioButton operagx;
     private javax.swing.JRadioButton spotify;
+    private javax.swing.JTextField text1;
+    private javax.swing.JTextField text2;
+    private javax.swing.JTextField text3;
+    private javax.swing.JTextField text4;
+    private javax.swing.JTextField text5;
     private javax.swing.JRadioButton vivaldi;
     private javax.swing.JRadioButton vlc;
     private javax.swing.JRadioButton winrar;

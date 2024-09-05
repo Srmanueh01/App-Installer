@@ -163,9 +163,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Google Chrome"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="googlechromeActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="mozillafirefox">
       <Properties>
@@ -176,17 +173,11 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Opera"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operaActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="operagx">
       <Properties>
         <Property name="text" type="java.lang.String" value="Opera GX"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="operagxActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -208,9 +199,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="VLC"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vlcActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="spotify">
       <Properties>
@@ -234,9 +222,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Malwarebytes"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="malwarebytesActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="avast">
       <Properties>

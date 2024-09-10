@@ -1,4 +1,4 @@
-App Installer
+##App Installer
 App Installer, a simple application made entirely in JAVA, where you can access the download pages of the most used applications.
 
 This small program is designed so that when you format your PC, or buy a new one, you can download the applications more quickly.
